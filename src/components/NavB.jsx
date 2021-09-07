@@ -6,12 +6,12 @@ const NavB = () => {
     return (
         <div>
             <Navbar bg="white" expand="lg">
-                <Container className="d-flex row">
+                <Container className="">
                     <Navbar.Brand href="#home">
                         <img src={img} width="100" alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Navbar.Collapse id="basic-navbar-nav justify-content-end">
                         <Nav className="me-auto">
                             <Nav.Link href="#home">Docs</Nav.Link>
                             <Nav.Link href="#link">About</Nav.Link>

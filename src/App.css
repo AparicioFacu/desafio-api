@@ -2,9 +2,30 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
-
 .body {
     background: rgb(36, 40, 47);
-    padding: 50px;
+    padding: 20px;
+}
+@media (max-width: 650px) {
+    .form-select {
+        width: 55% !important;
+        display: inline !important;
+        text-align: center;
+    }
+}
+@media (min-width: 650px) {
+    .form-select {
+        width: 25% !important;
+        display: inline !important;
+        text-align: center;
+    }
+}
+@media (min-width: 1250px) {
+    .form-select {
+        width: 15% !important;
+        display: inline !important;
+        text-align: center;
+    }
 }

@@ -12,13 +12,8 @@ function App() {
         <div className="footer-fix">
             <NavB />
             <CarouselB />
-            <Row>
-                <Col md={12}>
-                    <Home personajes />
-                </Col>
-            </Row>
             {/* <Container className="body"> */}
-
+            <Home personajes />
             {/* </Container> */}
             <FooterB />
         </div>

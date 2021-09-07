@@ -1,3 +1,4 @@
+import { Col, Row } from 'react-bootstrap';
 import './personaje.css';
 
 const Personaje = ({ personaje }) => {
@@ -13,11 +14,11 @@ const Personaje = ({ personaje }) => {
 
     return (
         <div>
-            <article className="articulo">
-                <div className="image">
+            <Row className="articulo ">
+                <Col sm={12} className="image ">
                     <img src={personaje.image} alt="" />
-                </div>
-                <div className="contenedor">
+                </Col>
+                <Col sm={12} className="contenedor ">
                     <div className="primero">
                         <a href="#">{personaje.name}</a>
                         <span>
@@ -33,8 +34,8 @@ const Personaje = ({ personaje }) => {
                         <span className="text-gray">First seen in:</span>
                         <a href="#">{personaje.origin.name}</a>
                     </div>
-                </div>
-            </article>
+                </Col>
+            </Row>
         </div>
     );
 };

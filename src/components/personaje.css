@@ -1,6 +1,20 @@
+@media (max-width: 350px) {
+    .articulo {
+        width: 600px;
+        height: 220px;
+    }
+}
+@media (min-width: 650px) {
+    .image {
+        flex: 2 1;
+        width: 100%;
+    }
+    .articulo {
+        width: 600px;
+        height: 220px;
+    }
+}
 .articulo {
-    width: 600px;
-    height: 220px;
     display: flex;
     overflow: hidden;
     background: rgb(60, 62, 68);
@@ -10,7 +24,7 @@
         rgb(0 0 0 / 6%) 0px 2px 4px -1px;
 }
 .image {
-    flex: 2 1 0%;
+    /* flex: 2 1; */
     width: 100%;
 }
 .image img {
@@ -20,7 +34,7 @@
 }
 .contenedor {
     flex: 3 1 0%;
-    /* position: relative; */
+    position: relative;
     padding: 0.75rem;
     color: rgb(255, 255, 255);
     display: flex;
