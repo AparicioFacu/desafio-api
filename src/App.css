@@ -3,10 +3,16 @@
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
+    background-image: url(../src/assets/Site-background-light.png);
 }
 .body {
-    background: rgb(36, 40, 47);
-    padding: 20px;
+    padding-top: 120px;
+}
+.nav-link {
+    color: white !important;
+}
+#basic-nav-dropdown a {
+    color: white;
 }
 @media (max-width: 650px) {
     .form-select {

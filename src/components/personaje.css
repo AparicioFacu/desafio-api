@@ -17,7 +17,6 @@
 .articulo {
     display: flex;
     overflow: hidden;
-    background: rgb(60, 62, 68);
     border-radius: 0.5rem;
     margin: 0.75rem;
     box-shadow: rgb(0 0 0 / 10%) 0px 4px 6px -1px,

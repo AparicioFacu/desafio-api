@@ -14,7 +14,7 @@ const Personaje = ({ personaje }) => {
 
     return (
         <div>
-            <Row className="articulo ">
+            <Row className="articulo bg-dark">
                 <Col sm={12} className="image ">
                     <img src={personaje.image} alt="" />
                 </Col>
