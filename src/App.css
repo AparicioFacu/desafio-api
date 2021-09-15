@@ -29,12 +29,14 @@ body {
         padding: 0px 0px 0px 50px;
     }
 }
-@media (max-width: 375px) {
+@media (min-width: 375px) {
     .navDropdown {
-        padding: 0px 0px 0px 00px;
+        padding: 0px 0px 0px 0px;
     }
 }
-
+.btn-canvas button {
+    background: white;
+}
 .bg-card {
     background-image: linear-gradient(
             67.5deg,

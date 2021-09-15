@@ -26,7 +26,7 @@ const OffCanvasB = ({ setStatus, setSpecies }) => {
                 show={show}
                 onHide={handleClose}
             >
-                <Offcanvas.Header closeButton>
+                <Offcanvas.Header className="btn-canvas" closeButton>
                     <Offcanvas.Title className="text-white">
                         Rick and Morty
                     </Offcanvas.Title>
