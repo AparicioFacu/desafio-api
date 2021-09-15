@@ -21,7 +21,11 @@ const OffCanvasB = ({ setStatus, setSpecies }) => {
                 aria-controls="basic-navbar-nav"
                 onClick={handleShow}
             ></Navbar.Toggle>
-            <Offcanvas className="bg-dark" show={show} onHide={handleClose}>
+            <Offcanvas
+                className="bg-nav-footer"
+                show={show}
+                onHide={handleClose}
+            >
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title className="text-white">
                         Rick and Morty
@@ -76,9 +80,9 @@ const OffCanvasB = ({ setStatus, setSpecies }) => {
                                     Disease
                                 </NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link className="text-white" href="#link">
+                            {/* <Nav.Link className="text-white" href="#link">
                                 Locations
-                            </Nav.Link>
+                            </Nav.Link> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Offcanvas.Body>

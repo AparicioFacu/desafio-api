@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
+body {
+    font-family: 'Source Code Pro', monospace;
+}
 .footer-fix {
     display: flex;
     flex-direction: column;
@@ -14,24 +19,134 @@
 #basic-nav-dropdown a {
     color: white;
 }
-@media (max-width: 650px) {
-    .form-select {
-        width: 55% !important;
-        display: inline !important;
-        text-align: center;
-    }
-}
 @media (min-width: 650px) {
-    .form-select {
-        width: 25% !important;
-        display: inline !important;
-        text-align: center;
+    .navDropdown {
+        padding: 0px 0px 0px 150px;
     }
 }
-@media (min-width: 1250px) {
-    .form-select {
-        width: 15% !important;
-        display: inline !important;
-        text-align: center;
+@media (max-width: 990px) {
+    .navDropdown {
+        padding: 0px 0px 0px 50px;
     }
+}
+@media (max-width: 375px) {
+    .navDropdown {
+        padding: 0px 0px 0px 00px;
+    }
+}
+
+.bg-card {
+    background-image: linear-gradient(
+            67.5deg,
+            rgb(6, 6, 6) 0%,
+            rgb(6, 6, 6) 6%,
+            rgb(29, 29, 29) 6%,
+            rgb(29, 29, 29) 57%,
+            rgb(52, 52, 52) 57%,
+            rgb(52, 52, 52) 58%,
+            rgb(75, 75, 75) 58%,
+            rgb(75, 75, 75) 79%,
+            rgb(97, 97, 97) 79%,
+            rgb(97, 97, 97) 93%,
+            rgb(120, 120, 120) 93%,
+            rgb(120, 120, 120) 95%,
+            rgb(143, 143, 143) 95%,
+            rgb(143, 143, 143) 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgb(6, 6, 6) 0%,
+            rgb(6, 6, 6) 6%,
+            rgb(29, 29, 29) 6%,
+            rgb(29, 29, 29) 57%,
+            rgb(52, 52, 52) 57%,
+            rgb(52, 52, 52) 58%,
+            rgb(75, 75, 75) 58%,
+            rgb(75, 75, 75) 79%,
+            rgb(97, 97, 97) 79%,
+            rgb(97, 97, 97) 93%,
+            rgb(120, 120, 120) 93%,
+            rgb(120, 120, 120) 95%,
+            rgb(143, 143, 143) 95%,
+            rgb(143, 143, 143) 100%
+        ),
+        linear-gradient(
+            135deg,
+            rgb(6, 6, 6) 0%,
+            rgb(6, 6, 6) 6%,
+            rgb(29, 29, 29) 6%,
+            rgb(29, 29, 29) 57%,
+            rgb(52, 52, 52) 57%,
+            rgb(52, 52, 52) 58%,
+            rgb(75, 75, 75) 58%,
+            rgb(75, 75, 75) 79%,
+            rgb(97, 97, 97) 79%,
+            rgb(97, 97, 97) 93%,
+            rgb(120, 120, 120) 93%,
+            rgb(120, 120, 120) 95%,
+            rgb(143, 143, 143) 95%,
+            rgb(143, 143, 143) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgb(6, 6, 6) 0%,
+            rgb(6, 6, 6) 6%,
+            rgb(29, 29, 29) 6%,
+            rgb(29, 29, 29) 57%,
+            rgb(52, 52, 52) 57%,
+            rgb(52, 52, 52) 58%,
+            rgb(75, 75, 75) 58%,
+            rgb(75, 75, 75) 79%,
+            rgb(97, 97, 97) 79%,
+            rgb(97, 97, 97) 93%,
+            rgb(120, 120, 120) 93%,
+            rgb(120, 120, 120) 95%,
+            rgb(143, 143, 143) 95%,
+            rgb(143, 143, 143) 100%
+        ),
+        linear-gradient(90deg, rgb(8, 8, 8), rgb(221, 221, 221));
+    background-blend-mode: overlay, overlay, overlay, overlay, normal;
+}
+.bg-nav-footer {
+    background-image: linear-gradient(
+            348deg,
+            transparent 0%,
+            transparent 76%,
+            rgba(194, 194, 194, 0.04) 76%,
+            rgba(194, 194, 194, 0.04) 93%,
+            transparent 93%,
+            transparent 100%
+        ),
+        linear-gradient(
+            150deg,
+            transparent 0%,
+            transparent 10%,
+            rgba(194, 194, 194, 0.04) 10%,
+            rgba(194, 194, 194, 0.04) 74%,
+            transparent 74%,
+            transparent 100%
+        ),
+        linear-gradient(
+            68deg,
+            transparent 0%,
+            transparent 36%,
+            rgba(194, 194, 194, 0.04) 36%,
+            rgba(194, 194, 194, 0.04) 47%,
+            transparent 47%,
+            transparent 100%
+        ),
+        linear-gradient(
+            199deg,
+            transparent 0%,
+            transparent 37%,
+            rgba(194, 194, 194, 0.04) 37%,
+            rgba(194, 194, 194, 0.04) 47%,
+            transparent 47%,
+            transparent 100%
+        ),
+        linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0));
+}
+
+.text-gray {
+    color: rgb(158, 158, 158);
 }

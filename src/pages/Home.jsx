@@ -1,11 +1,13 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+
 import NavB from '../components/NavB';
+import PaginationB from '../components/PaginationB';
 import Personaje from '../components/Personaje';
 import { API_URL } from '../config/api';
 
-const Home = () => {
-    const [personajes, setPersonajes] = useState([]);
+const Home = ({ personajes, setPersonajes }) => {
+    // const [personajes, setPersonajes] = useState([]);
     const [page, setPage] = useState(1);
     const [status, setStatus] = useState('');
     const [species, setSpecies] = useState('');
@@ -14,6 +16,29 @@ const Home = () => {
     useEffect(() => {
         const request = async () => {
             try {
+                /* guardar todas la paginas en un array */
+                let promises = [];
+                for (let i = 1; i <= 34; i++) {
+                    const promise = axios.get(
+                        `${API_URL}/character/?page=${i}&status=${status}&species=${species}`
+                    );
+                    //promises = [...promises, promise];
+                }
+                const responses = await Promise.all(promises);
+                let array = [];
+                for (let i = 0; i < responses.length; i++) {
+                    const response = responses[i];
+                    array = [...array, ...response.data.results];
+                }
+                /*##################################################### */
+
+                /*Paginado */
+
+                const limit = 4;
+                const initial = 0 + (page * limit - limit);
+                const last = initial + limit;
+                const newsPaginated = array.slice(initial, last);
+                /*######################################################### */
                 const responseCharacter = await axios.get(
                     `${API_URL}/character/?page=${page}&status=${status}&species=${species}`
                 );
@@ -34,10 +59,13 @@ const Home = () => {
         <Personaje personaje={per} />
     ));
 
-    const pageNext = () => setPage(page + 1);
+    const pageNext = () => {
+        setPage(page + 1);
+    };
     const pagePrevious = () => setPage(page - 1);
     const isPreviousPage = page === 1;
     const isNextPage = page === 34;
+
     return (
         <>
             <NavB
@@ -64,6 +92,9 @@ const Home = () => {
                     Siguiente
                 </button>
             </div>
+            {/* <div className="body text-center p-5">
+                <PaginationB page={page} setPage={setPage} />
+            </div> */}
         </>
     );
 };

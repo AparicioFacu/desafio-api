@@ -3,6 +3,7 @@ import img from '../assets/logo.png';
 import img1 from '../assets/titulo.png';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import OffCanvasB from './OffCanvasB';
+import { Link } from 'react-router-dom';
 
 const NavB = ({ setStatus, setSpecies, locations }) => {
     const changeStatus = (event) => {
@@ -14,21 +15,23 @@ const NavB = ({ setStatus, setSpecies, locations }) => {
 
     return (
         <>
-            <Navbar bg="dark" expand="lg" variant="dark" fixed="top">
+            <Navbar
+                className="bg-nav-footer"
+                expand="lg"
+                variant="dark"
+                fixed="top"
+            >
                 <Container
                     fluid
                     className="d-flex flex-wrap justify-content-between"
                 >
                     <div>
-                        <Navbar.Brand
-                            href="#home"
-                            style={{ padding: '0px 0px 0px 50px' }}
-                        >
+                        <Navbar.Brand href="/">
                             <img src={img} width="70" alt="" />
                         </Navbar.Brand>
                     </div>
-                    <div>
-                        <Navbar.Brand href="#home">
+                    <div className="navDropdown">
+                        <Navbar.Brand href="/">
                             <img src={img1} width="180" alt="" />
                         </Navbar.Brand>
                     </div>
@@ -38,16 +41,30 @@ const NavB = ({ setStatus, setSpecies, locations }) => {
                             setSpecies={setSpecies}
                         />
                         <Navbar.Collapse
-                            style={{ padding: '0px 80px 0px 0px' }}
+                            style={{ padding: '0px 60px 0px 0px' }}
                             className="d-none d-lg-block"
                             id="basic-navbar-nav justify-content-end"
                         >
                             <Nav className="me-auto">
+                                {/* <NavDropdown
+                                    title="Locations"
+                                    id="basic-nav-dropdown"
+                                    // style={{ overflow: 'auto' }}
+                                >
+                                    {locations.map((loc) => (
+                                        <NavDropdown.Item key={loc.id}>
+                                            {loc.name}
+                                        </NavDropdown.Item>
+                                    ))}
+                                </NavDropdown> */}
                                 <NavDropdown
                                     title="Species"
                                     id="basic-nav-dropdown"
                                 >
-                                    <NavDropdown.Item onClick={changeSpecies}>
+                                    <NavDropdown.Item
+                                        href="/Human"
+                                        onClick={changeSpecies}
+                                    >
                                         Human
                                     </NavDropdown.Item>
                                     <NavDropdown.Item onClick={changeSpecies}>
@@ -77,17 +94,6 @@ const NavB = ({ setStatus, setSpecies, locations }) => {
                                     <NavDropdown.Item onClick={changeSpecies}>
                                         Disease
                                     </NavDropdown.Item>
-                                </NavDropdown>
-                                <NavDropdown
-                                    title="Locations"
-                                    id="basic-nav-dropdown"
-                                    // style={{ overflow: 'auto' }}
-                                >
-                                    {locations.map((loc) => (
-                                        <NavDropdown.Item key={loc.id}>
-                                            {loc.name}
-                                        </NavDropdown.Item>
-                                    ))}
                                 </NavDropdown>
                                 <NavDropdown
                                     title="Status"
