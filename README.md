@@ -1,4 +1,4 @@
-# React Challenge IOL
+# React Challenge
 
 Deployed on: https://rick-and-morty-api-mauve.vercel.app/
 
