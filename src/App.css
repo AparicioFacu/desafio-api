@@ -152,3 +152,16 @@ body {
 .text-gray {
     color: rgb(158, 158, 158);
 }
+.bg-titulo {
+    background-color: black;
+    width: 15rem;
+    border-radius: 12px;
+}
+
+.page-item.active .page-link {
+    color: black !important;
+    background-color: #ffc107 !important;
+}
+.page-item .page-link {
+    color: black !important;
+}

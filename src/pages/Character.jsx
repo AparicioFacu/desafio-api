@@ -3,6 +3,8 @@ import { Container } from 'react-bootstrap';
 import { useParams, Redirect } from 'react-router-dom';
 import PersonajeDetalle from '../components/PersonajeDetalle';
 
+import NavB2 from '../components/NavB2';
+
 const Character = ({ character }) => {
     const { charId } = useParams();
 
@@ -14,7 +16,10 @@ const Character = ({ character }) => {
 
     return (
         <div>
-            <h2 className="text-center text-white mt-3">{character.name}</h2>
+            <NavB2 />
+            <h2 className="bg-titulo text-center m-auto text-white mt-3">
+                {personajeEncontrado.name}
+            </h2>
             <Container>
                 <PersonajeDetalle personaje={personajeEncontrado} />
             </Container>

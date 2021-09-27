@@ -42,6 +42,12 @@
     padding-left: 42px;
 }
 
+@media (min-width: 1000px) {
+    .navbrand {
+        padding: 0px 130px 0px 0px;
+    }
+}
+
 .contenedor {
     flex: 3 1 0%;
     position: relative;

@@ -1,5 +1,5 @@
 import { Col, Row, Button } from 'react-bootstrap';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './personaje.css';
 
